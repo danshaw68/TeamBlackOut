@@ -2,7 +2,8 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo">
-        <!-- Customize your theme here. -->
+    <item name="android:textColor">@color/text</item>
+    <item name="android:windowBackground">@color/background</item>
     </style>
 
 </resources>

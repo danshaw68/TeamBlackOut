@@ -1,0 +1,5 @@
+<resources>
+    <color name="background">#ff000000</color>
+    <color name="text">#ffffffff</color>
+    <color name="drawer_bg">#ff111111</color>
+</resources>

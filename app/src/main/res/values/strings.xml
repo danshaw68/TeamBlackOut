@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TeamBlackout</string>\
+    <string name="app_name">TeamBlackOut</string>\
     <string name="title_section1">Available Apps</string>
-    <string name="title_section2">Press Releases</string>
+    <string name="title_section2">BlackOut News</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>

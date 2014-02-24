@@ -69,12 +69,13 @@ public class PackageListFragment extends Fragment {
                 {
 
                     Package data = adapter.getItem(position);
-
+                if (!data.icon.isEmpty())  {
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction()
                             .replace(R.id.container, PackageDetailsFragment.newInstance(data.title, data.icon, data.md5, data.download, data.preview, data.description))
                             .addToBackStack(null)
                             .commit();
+                }
                 }});
 
         } catch (InterruptedException e) {
