@@ -97,9 +97,10 @@ public class PackageDetailsFragment extends Fragment {
         Target target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                Log.d("IMAGE", "GOT ICON");
                 getActivity().getActionBar().setIcon(new BitmapDrawable(bitmap));
-                p.with(getActivity()).load(preview).into(previewView);
+                if (!preview.isEmpty()) {
+                     p.with(getActivity()).load(preview).into(previewView);
+                }
 
             }
 
