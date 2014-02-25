@@ -54,11 +54,13 @@ public class MainActivity extends Activity
             case 0:
             fragmentManager.beginTransaction()
                     .replace(R.id.container, ThemeFragment.newInstance(position + 1))
+                    .addToBackStack(null)
                     .commit();
             break;
             case 1:
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, PressFragment.newInstance(position + 1))
+                        .addToBackStack(null)
                         .commit();
                 break;
         }
