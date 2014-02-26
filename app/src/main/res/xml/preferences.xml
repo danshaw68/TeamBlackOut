@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_category">
+        <com.blackout.paidupdater.colorpicker.ColorPickerPreference
+            android:key="color1"
+            android:title="@string/color1_title"
+            android:summary="@string/color1_summary"
+            android:defaultValue="@integer/COLOR_BLACK"
+            />
+        <com.blackout.paidupdater.colorpicker.ColorPickerPreference
+            android:key="color2"
+            android:title="@string/color2_title"
+            android:summary="@string/color2_summary"
+            android:defaultValue="@integer/COLOR_GREEN"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Hello">
+
+    </PreferenceCategory>
+</PreferenceScreen>
