@@ -161,112 +161,12 @@ public class PackageDetailsFragment extends Fragment {
                             .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE)
                             .setAllowedOverRoaming(false)
                             .setTitle(title)
-                            .setDescription("Downloading..")
+ .setDescription("Downloading..")
                             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
                     );
-
-                    BroadcastReceiver onComplete=new BroadcastReceiver() {
-                        public void onReceive(Context ctxt, Intent intent) {
-
-                            String[] type = splitter[3].split("\\.");
-                            String path = Environment.getExternalStorageDirectory() + "/Download/" + splitter[3];
-                            Log.d("path", path);
-
-                            if (type[1].equals("apk")) {
-                                Intent promptInstall = new Intent(Intent.ACTION_VIEW)
-                                        .setDataAndType(Uri.fromFile(new File
-                                                (path)), "application/vnd.android.package-archive");
-                                startActivity(promptInstall);
-                            } else if (type[1].equals("zip")) {
-                                try {
-                                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            switch (which){
-                                                case DialogInterface.BUTTON_POSITIVE:
-                                                    //Yes button clicked
-                                                    Process proc = null;
-                                                    try {
-                                                        proc = Runtime.getRuntime().exec(new String[] { "su", "-c", "reboot recovery" });
-                                                        proc.waitFor();
-                                                    } catch (IOException e) {
-                                                        e.printStackTrace();
-                                                    } catch (InterruptedException e) {
-                                                        e.printStackTrace();
-                                                    }
-                                                    break;
-
-                                                case DialogInterface.BUTTON_NEGATIVE:
-                                                    //No button clicked
-
-                                                    break;
-                                            }
-                                        }
-                                    };
-
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                                    builder.setMessage("Do you want to reboot into recovery to install this download?").setPositiveButton("Yes", dialogClickListener)
-                                            .setNegativeButton("No", dialogClickListener).show();
-
-                                } catch (Exception ex) {
-                                }
-                                // do things
-                            } else {
-                                DisplayMetrics displayMetrics = new DisplayMetrics();
-                                getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-                                int height = displayMetrics.heightPixels;
-                                int width = displayMetrics.widthPixels << 1; // best wallpaper width is twice screen width
-
-                                // First decode with inJustDecodeBounds=true to check dimensions
-                                final BitmapFactory.Options options = new BitmapFactory.Options();
-                                options.inJustDecodeBounds = true;
-                                BitmapFactory.decodeFile(path, options);
-
-                                // Calculate inSampleSize
-                                options.inSampleSize = calculateInSampleSize(options, width, height);
-
-                                // Decode bitmap with inSampleSize set
-                                options.inJustDecodeBounds = false;
-                                Bitmap decodedSampleBitmap = BitmapFactory.decodeFile(path, options);
-
-                                WallpaperManager wm = WallpaperManager.getInstance(getActivity());
-                                try {
-                                    wm.setBitmap(decodedSampleBitmap);
-                                    Toast.makeText(getActivity(), "Background Changed", Toast.LENGTH_LONG);
-                                } catch (IOException e) {
-                                }
-                            }
-                        }
-                    };
-
-                    getActivity().registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
                 }
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
-
-    public static int calculateInSampleSize(
-            BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-
-        return inSampleSize;
-    }
-
 }
