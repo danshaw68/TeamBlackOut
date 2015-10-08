@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class GetAPKList extends AsyncTask<ArrayList<Package>, Void, ArrayList<Package>> {
     // All static variables
-    static final String BASEURL = "http://jbthemes.com/teamblackedoutapps/";
+    static final String BASEURL = "http://teamblackedout.com/";
     static final String APPURL = "Updates-XML-PAID/";
     String mURL = null;
     // XML node keys

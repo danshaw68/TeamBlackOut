@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class GetThemeList extends AsyncTask<ArrayList<ThemeList>, Void, ArrayList<ThemeList>> {
     ProgressDialog dialog;
     // All static variables
-    static final String URL = "http://jbthemes.com/teamblackedoutapps/Updates-XML-PAID/updater.parts.xml";
+    static final String URL = "http://teamblackedout.com/Updates-XML-PAID/updater.parts.xml";
     // XML node keys
     static final String KEY_ITEM = "Tab"; // parent node
     static final String KEY_NAME = "TabName";

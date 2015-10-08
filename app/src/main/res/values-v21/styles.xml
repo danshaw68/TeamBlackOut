@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Wallpaper">
+    <style name="AppTheme" parent="android:Theme.Material.Wallpaper">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/background</item>
         <item name="android:statusBarColor">@color/transparent</item>

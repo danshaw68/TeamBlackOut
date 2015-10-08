@@ -1,22 +1,14 @@
 package com.blackout.paidupdater.Packages;
 
-import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.Fragment;
-import android.app.WallpaperManager;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,14 +18,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.blackout.paidupdater.R;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
-import com.blackout.paidupdater.R;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -153,15 +142,15 @@ public class PackageDetailsFragment extends Fragment {
                 downloadManager = (DownloadManager) getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
 
                 if (Download_Uri != null) {
-                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://jbthemes.com/" + Download_Uri.getPath().toString()));
+                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://teamblackedout.com/" + Download_Uri.getPath().toString()));
 
                     final String[] splitter = Download_Uri.getFile().split("/");
                     downloadManager.enqueue(request
-                            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, splitter[3])
+                            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, splitter[2])
                             .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE)
                             .setAllowedOverRoaming(false)
                             .setTitle(title)
- .setDescription("Downloading..")
+                            .setDescription("Downloading..")
                             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
                     );
                 }

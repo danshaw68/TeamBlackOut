@@ -54,7 +54,7 @@ public class PressFragment extends Fragment {
         getActivity().getActionBar().setIcon(R.drawable.ic_launcher);
 
         try {
-            GetUpdatesList task = new GetUpdatesList("http://jbthemes.com/teamblackedoutapps/update_description.xml", getActivity(), false);
+            GetUpdatesList task = new GetUpdatesList("http://teamblackedout.com/update_description.xml", getActivity(), false);
 
             lv = (ListView) rootView.findViewById(R.id.listView);
 
