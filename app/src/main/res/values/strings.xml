@@ -8,20 +8,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on Color to apply</string>
-
-    <!-- Preferences -->
-    <string name="pref_category">ColorPicker</string>
-    <string name="color1_title">Text Color</string>
-    <string name="color1_summary">Change the color of the text</string>
-    <string name="color2_title">Background</string>
-    <string name="color2_summary">Change the color of the background</string>
-
-
-
     <string name="action_download">download</string>
 
 

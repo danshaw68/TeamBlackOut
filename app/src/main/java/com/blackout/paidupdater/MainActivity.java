@@ -33,7 +33,6 @@ import android.widget.Toast;
 
 import com.blackout.paidupdater.News.PressFragment;
 import com.blackout.paidupdater.Themes.ThemeFragment;
-import com.blackout.paidupdater.colorpicker.ColorPickerView;
 import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
