@@ -1,38 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/previewView"/>
-		
 
-	<com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/wall_actions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        fab:fab_addButtonColorNormal="@color/btn_normal"
-        fab:fab_addButtonColorPressed="@color/pressed"
-        fab:fab_addButtonPlusIconColor="@color/white"
-        fab:fab_labelStyle="@style/FabLabels"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="true">
 
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/savewall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            fab:fab_icon="@drawable/ic_action_download"
-            fab:fab_size="mini"
-            fab:fab_title="@string/action_download"
-            android:background="@color/btn_normal"
-            android:clickable="true" />
-
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,6 +21,19 @@
         android:layout_centerHorizontal="true"
         android:padding="20dp" />
 
-
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/action_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:src="@drawable/ic_action_download"
+        fab:fab_colorNormal="@color/btn_normal"
+        fab:fab_colorPressed="@color/pressed"
+        fab:fab_colorRipple="@color/ripple"
+        android:layout_marginEnd="23dp"
+        android:layout_alignTop="@+id/descriptionView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        fab:fab_shadow="false"/>
 
 </RelativeLayout>
