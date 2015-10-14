@@ -1,8 +1,10 @@
 package com.blackout.paidupdater.Packages;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,9 @@ public class PackageListFragment extends Fragment {
      */
     private static final String ARG_TITLE = "title";
     private static final String ARG_URL = "url";
+    private ActionBar getActionBar() {
+        return ((ActionBarActivity) getActivity()).getSupportActionBar();
+    }
 
 
     /**
@@ -51,8 +56,8 @@ public class PackageListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
-        getActivity().getActionBar().setTitle(getArguments().getString(ARG_TITLE));
-        getActivity().getActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setTitle(getArguments().getString(ARG_TITLE));
+        getActionBar().setIcon(R.drawable.ic_launcher);
 
         try {
             GetAPKList task = new GetAPKList(getArguments().getString(ARG_URL), getActivity());

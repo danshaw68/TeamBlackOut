@@ -1,8 +1,10 @@
 package com.blackout.paidupdater.News;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,9 @@ public class PressFragment extends Fragment {
 
     private NewsAdapter adapter;
     private ListView lv;
+    private ActionBar getActionBar() {
+        return ((ActionBarActivity) getActivity()).getSupportActionBar();
+    }
 
     /**
      * The fragment argument representing the section number for this
@@ -42,6 +47,7 @@ public class PressFragment extends Fragment {
         return fragment;
     }
 
+
     public PressFragment() {
     }
 
@@ -50,8 +56,9 @@ public class PressFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_news, container, false);
 
-        getActivity().getActionBar().setTitle("Press Releases");
-        getActivity().getActionBar().setIcon(R.drawable.ic_launcher);
+
+        getActionBar().setTitle("Press Releases");
+        getActionBar().setIcon(R.drawable.ic_launcher);
 
         try {
             GetUpdatesList task = new GetUpdatesList("http://teamblackedout.com/update_description.xml", getActivity(), false);

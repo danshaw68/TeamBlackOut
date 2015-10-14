@@ -1,16 +1,16 @@
 package com.blackout.paidupdater.Themes;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.blackout.paidupdater.MainActivity;
 import com.blackout.paidupdater.Packages.PackageListFragment;
 import com.blackout.paidupdater.R;
 
@@ -19,6 +19,9 @@ import java.util.concurrent.ExecutionException;
 public class ThemeFragment extends Fragment {
     private ThemeAdapter adapter;
     private ListView lv;
+    private ActionBar getActionBar() {
+        return ((ActionBarActivity) getActivity()).getSupportActionBar();
+    }
 
     /**
      * The fragment argument representing the section number for this
@@ -46,8 +49,8 @@ public class ThemeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
-        getActivity().getActionBar().setTitle("Available Theme Packages");
-        getActivity().getActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setTitle("Available Theme Packages");
+        getActionBar().setIcon(R.drawable.ic_launcher);
         try {
             GetThemeList task = new GetThemeList(getActivity());
 
@@ -81,10 +84,4 @@ public class ThemeFragment extends Fragment {
         return rootView;
     }
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        ((MainActivity) activity).onSectionAttached(
-                getArguments().getInt(ARG_SECTION_NUMBER));
-    }
 }

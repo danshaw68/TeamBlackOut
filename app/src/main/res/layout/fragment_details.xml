@@ -9,31 +9,29 @@
         android:layout_height="wrap_content"
         android:id="@+id/previewView"/>
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/descriptionView"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:padding="20dp" />
+        android:padding="20dp"
+        android:layout_above="@+id/action_download"
+        android:layout_centerHorizontal="true" />
 
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/action_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="23dp"
         android:src="@drawable/ic_action_download"
+        android:background="@drawable/fab_bg_normal"
         fab:fab_colorNormal="@color/btn_normal"
         fab:fab_colorPressed="@color/pressed"
-        fab:fab_colorRipple="@color/ripple"
-        android:layout_marginEnd="23dp"
-        android:layout_alignTop="@+id/descriptionView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        fab:fab_shadow="false"/>
+        fab:fab_shadow="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/descriptionView"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="23dp" />
 
 </RelativeLayout>

@@ -1,14 +1,15 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Wallpaper">
+    <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/background</item>
-        <item name="android:statusBarColor">@color/transparent</item>
-        <item name="android:navigationBarColor">@color/transparent</item>
     </style>
-    <style name="FabLabels">
-        <item name="android:background">@drawable/fab_label_background</item>
-        <item name="android:textColor">@color/text</item>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryDark">@color/background</item>
     </style>
 </resources>

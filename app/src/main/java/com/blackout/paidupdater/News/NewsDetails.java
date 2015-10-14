@@ -1,7 +1,9 @@
 package com.blackout.paidupdater.News;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,10 @@ public class NewsDetails extends Fragment {
     private static final String ARG_TITLE = "title";
     private static final String ARG_DATE = "date";
     private static final String ARG_description = "description";
+    private ActionBar getActionBar() {
+        return ((ActionBarActivity) getActivity()).getSupportActionBar();
+    }
+
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -48,7 +54,7 @@ public class NewsDetails extends Fragment {
         title = getArguments().getString(ARG_TITLE);
         String date = getArguments().getString(ARG_DATE);
         String description = getArguments().getString(ARG_description);
-        getActivity().getActionBar().setTitle(title);
+        getActionBar().setTitle(title);
 
 
 

@@ -1,11 +1,9 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Material.Wallpaper">
+    <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/background</item>
-        <item name="android:statusBarColor">@color/transparent</item>
-        <item name="android:navigationBarColor">@color/transparent</item>
     </style>
 
 </resources>

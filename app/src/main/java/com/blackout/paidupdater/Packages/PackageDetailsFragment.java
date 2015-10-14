@@ -1,7 +1,6 @@
 package com.blackout.paidupdater.Packages;
 
 import android.app.DownloadManager;
-import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -9,6 +8,9 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -46,6 +48,9 @@ public class PackageDetailsFragment extends Fragment {
     private static final String ARG_download = "download";
     private static final String ARG_preview = "preview";
     private static final String ARG_description = "description";
+    private ActionBar getActionBar() {
+        return ((ActionBarActivity) getActivity()).getSupportActionBar();
+    }
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -86,7 +91,7 @@ public class PackageDetailsFragment extends Fragment {
         Target target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                getActivity().getActionBar().setIcon(new BitmapDrawable(bitmap));
+                getActionBar().setIcon(new BitmapDrawable(bitmap));
                 if (!preview.isEmpty()) {
                      p.with(getActivity()).load(preview).into(previewView);
                 }
@@ -119,7 +124,7 @@ public class PackageDetailsFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        getActivity().getActionBar().setTitle(title);
+        getActionBar().setTitle(title);
 
         inflater.inflate(R.menu.download, menu);
         super.onCreateOptionsMenu(menu, inflater);

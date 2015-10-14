@@ -1,12 +1,13 @@
 <resources>
-    <color name="background">#60000000</color>
+    <color name="background">#ff000000</color>
     <color name="text">#ffffffff</color>
     <color name="secondary_text">#ffcccccc</color>
     <color name="drawer_bg">#cc111111</color>
     <color name="transparent">#00000000</color>
-    <color name="pressed">#60555555</color>
+    <color name="pressed">#ff555555</color>
+    <color name="fab">#ff444444</color>
     <color name="ripple">#40ffffff</color>
-    <color name="btn_normal">#60333333</color>
+    <color name="btn_normal">#ff333333</color>
     <color name="divider">#ffe1e1e1</color>
     <color name="solid_black">#ff000000</color>
     <color name="white">#ffffffff</color>
