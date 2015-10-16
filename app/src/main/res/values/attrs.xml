@@ -36,4 +36,7 @@
             <enum name="right" value="3"/>
         </attr>
     </declare-styleable>
+
+    <attr name="themedMenuStoryDrawable" format="reference" />
+    <attr name="themedMenuCommentDrawable" format="reference" />
 </resources>

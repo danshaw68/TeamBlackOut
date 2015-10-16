@@ -4,11 +4,16 @@
     <style name="AppTheme" parent="AppTheme.Base">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
     </style>
-    <style name="ClearAppTheme" parent="AppTheme">
-    <item name="android:windowBackground">@color/clear_background</item>
-    <item name="android:windowShowWallpaper">true</item>
-    <item name="android:statusBarColor">@color/transparent</item>
-    <item name="android:navigationBarColor">@color/transparent</item>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:windowBackground">@color/clear_background</item>
+        <item name="isLightTheme">false</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
     </style>
 </resources>

@@ -15,12 +15,12 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
          findViewById(R.id.container);
 
+        if (PreferenceManager.getDefaultSharedPreferences(this)
+                .getBoolean(getString(R.string.clear_theme), false)) {
+            setTheme(R.style.AppTheme_Light);
+        }
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
