@@ -5,6 +5,11 @@
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/background</item>
     </style>
+    <style name="ClearAppTheme" parent="AppTheme">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:windowBackground">@color/clear_background</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat">
         <item name="windowNoTitle">true</item>
