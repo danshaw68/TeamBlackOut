@@ -1,6 +1,8 @@
 package com.blackout.paidupdater.Themes;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -9,16 +11,21 @@ import com.blackout.paidupdater.R;
 
 public class SwitchPreference extends android.preference.SwitchPreference {
 
-    public SwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    public SwitchPreference(Context context) {
+        super(context);
     }
 
     public SwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SwitchPreference(Context context) {
-        super(context);
+    public SwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public SwitchPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     @Override

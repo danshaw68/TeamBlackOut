@@ -3,9 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <PreferenceCategory android:title="Work In Progress..."/>
+
+
+
+    <PreferenceCategory android:title="TeamBlackedOut.com">
+        <intent android:action="android.intent.action.VIEW"
+        android:data="http://teamblackedout.com" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="DJ Darkknight Dev Page">
+        <intent android:action="android.intent.action.VIEW"
+        android:data="http://play.google.com/store/apps/dev?id=7870565429619333034" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Train88 Dev Page">
+        <intent android:action="android.intent.action.VIEW"
+        android:data="http://play.google.com/store/apps/dev?id=4933494923641037970" />
+    </PreferenceCategory>
+
     <com.blackout.paidupdater.Themes.SwitchPreference
-        android:key="@string/clear_theme"
-        android:title="@string/clear_theme"
+        android:key="@string/ThemeStyle"
+        android:title="@string/ThemeStyle"
         android:defaultValue="false" />
+
 </PreferenceScreen>
 

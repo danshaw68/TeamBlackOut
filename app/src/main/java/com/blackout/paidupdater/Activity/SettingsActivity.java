@@ -58,7 +58,7 @@ public class SettingsActivity extends PreferenceActivity {
                 mListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
                         @Override
                         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                                if (!key.equals(getString(R.string.clear_theme))) {
+                                if (!key.equals(getString(R.string.ThemeStyle))) {
                                         return;
                                 }
                                 finish();

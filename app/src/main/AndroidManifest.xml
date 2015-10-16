@@ -24,6 +24,7 @@
         <activity android:name=".Activity.SettingsActivity"
             android:theme="@style/AppTheme" android:label="@string/action_settings">
             <intent-filter>
+                <intent android:action="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.SET_WALLPAPER" />
             </intent-filter>
         </activity>

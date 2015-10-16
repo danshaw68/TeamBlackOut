@@ -118,7 +118,7 @@
     <orderEntry type="library" exported="" name="date4j" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.0.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.0.1" level="project" />
-    <orderEntry type="library" exported="" name="dom-2.3.0-jaxb-1.0.6" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.0.1" level="project" />
+    <orderEntry type="library" exported="" name="dom-2.3.0-jaxb-1.0.6" level="project" />
   </component>
 </module>

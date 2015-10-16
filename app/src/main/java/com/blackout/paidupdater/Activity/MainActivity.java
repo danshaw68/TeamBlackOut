@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity
          findViewById(R.id.container);
 
         if (PreferenceManager.getDefaultSharedPreferences(this)
-                .getBoolean(getString(R.string.clear_theme), false)) {
-            setTheme(R.style.AppTheme_Light);
+                .getBoolean(getString(R.string.ThemeStyle), true)) {
+            setTheme(R.style.AppThemeLight);
         }
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);

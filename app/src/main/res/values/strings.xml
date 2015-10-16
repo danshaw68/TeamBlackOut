@@ -10,7 +10,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_download">Download</string>
 
-    <string name="clear_theme">Clear Theme</string>
+    <string name="ThemeStyle">Black Theme</string>
     <string name="settings">Settings</string>
 
     <string-array name="nav_drawer_labels">

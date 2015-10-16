@@ -39,4 +39,13 @@
 
     <attr name="themedMenuStoryDrawable" format="reference" />
     <attr name="themedMenuCommentDrawable" format="reference" />
+    <attr name="windowBackground" format="reference" />
+    <attr name="windowIsTranslucent" format="boolean" />
+    <attr name="windowContentOverlay" format="reference" />
+    <attr name="windowTranslucentStatus" format="boolean" />
+    <attr name="windowDrawsSystemBarBackgrounds" format="boolean" />
+    <attr name="windowTranslucentNavigation" format="boolean" />
+    <attr name="windowShowWallpaper" format="boolean"/>
+    <attr name="BackgroundColor" format="color" />
+    <attr name="backgroundDimEnabled" format="boolean" />
 </resources>

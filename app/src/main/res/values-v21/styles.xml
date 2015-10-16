@@ -1,19 +1,27 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="AppTheme.Base">
-        <item name="android:textColor">@color/text</item>
-        <item name="android:windowBackground">@color/background</item>
-        <item name="android:statusBarColor">@color/transparent</item>
-        <item name="android:navigationBarColor">@color/transparent</item>
-    </style>
-
-    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/clear_background</item>
-        <item name="isLightTheme">false</item>
-        <item name="android:windowShowWallpaper">true</item>
         <item name="android:statusBarColor">@color/transparent</item>
         <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:toolbarStyle">@style/ToolbarTheme</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="colorPrimary">@color/solid_black</item>
+        <item name="colorPrimaryDark">@color/clear_background</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/solid_black</item>
+        <item name="windowBackground">@color/solid_black</item>
+        <item name="android:windowShowWallpaper">false</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="colorPrimary">@color/solid_black</item>
+        <item name="colorPrimaryDark">@color/solid_black</item>
+        <item name="android:statusBarColor">@color/solid_black</item>
+        <item name="android:navigationBarColor">@color/solid_black</item>
+        <item name="android:colorAccent">@color/accent</item>
     </style>
 </resources>
