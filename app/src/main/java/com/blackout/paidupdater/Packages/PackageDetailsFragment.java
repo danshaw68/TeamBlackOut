@@ -8,9 +8,11 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Vibrator;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -38,6 +40,8 @@ public class PackageDetailsFragment extends Fragment {
     URL Download_Uri;
     String download;
 
+    private boolean isLollipopPlus = false;
+
     /**
      * The fragment argument representing the section number for this
      * fragment.
@@ -49,7 +53,7 @@ public class PackageDetailsFragment extends Fragment {
     private static final String ARG_preview = "preview";
     private static final String ARG_description = "description";
     private ActionBar getActionBar() {
-        return ((ActionBarActivity) getActivity()).getSupportActionBar();
+        return ((AppCompatActivity) getActivity()).getSupportActionBar();
     }
 
     /**
@@ -74,8 +78,8 @@ public class PackageDetailsFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fragment_details, container, false);
 
         //registerReceiver(onComplete, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
@@ -87,6 +91,16 @@ public class PackageDetailsFragment extends Fragment {
         String description = getArguments().getString(ARG_description);
 
         final ImageView previewView = (ImageView) rootView.findViewById(R.id.previewView);
+
+        FloatingActionButton downloadFAB = (FloatingActionButton) rootView.findViewById(R.id.floatingActionButton);
+        downloadFAB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Vibrator vib = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vib.vibrate(100);
+                download();
+            }
+        });
 
         Target target = new Target() {
             @Override
@@ -125,8 +139,6 @@ public class PackageDetailsFragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         getActionBar().setTitle(title);
-
-        inflater.inflate(R.menu.download, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -135,32 +147,31 @@ public class PackageDetailsFragment extends Fragment {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        switch (id) {
-            case R.id.action_download:
-                try {
-                    Download_Uri = new URL(download);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                    Download_Uri = null;
-                }
-                downloadManager = (DownloadManager) getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
+        return super.onOptionsItemSelected(item);
+    }
 
-                if (Download_Uri != null) {
-                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://teamblackedout.com/" + Download_Uri.getPath().toString()));
+    private void download() {
+        downloadManager = (DownloadManager) getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
 
-                    final String[] splitter = Download_Uri.getFile().split("/");
-                    downloadManager.enqueue(request
+        try {
+            Download_Uri = new URL(download);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            Download_Uri = null;
+        }
+
+        if (Download_Uri != null) {
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse("http://teamblackedout.com/" + Download_Uri.getPath()));
+
+            final String[] splitter = Download_Uri.getFile().split("/");
+            downloadManager.enqueue(request
                             .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, splitter[2])
                             .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE)
                             .setAllowedOverRoaming(false)
                             .setTitle(title)
                             .setDescription("Downloading..")
                             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                    );
-                }
-                break;
+            );
         }
-        return super.onOptionsItemSelected(item);
     }
 }
