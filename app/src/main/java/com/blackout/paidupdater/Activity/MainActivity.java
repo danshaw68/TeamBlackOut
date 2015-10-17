@@ -53,14 +53,13 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (PreferenceManager.getDefaultSharedPreferences(this)
+                .getBoolean(getString(R.string.ThemeStyle), false)) {
+            setTheme(R.style.AppThemeLight);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
          findViewById(R.id.container);
-
-        if (PreferenceManager.getDefaultSharedPreferences(this)
-                .getBoolean(getString(R.string.ThemeStyle), true)) {
-            setTheme(R.style.AppThemeLight);
-        }
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 

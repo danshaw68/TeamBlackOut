@@ -3,9 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <PreferenceCategory android:title="Work In Progress..."/>
-
-
+    <PreferenceCategory android:title="Work In Progress..Except the Theme Switch works."/>
 
     <PreferenceCategory android:title="TeamBlackedOut.com">
         <intent android:action="android.intent.action.VIEW"

@@ -22,7 +22,7 @@
         <item name="android:layout_marginRight">@dimen/fab_margin_right</item>
     </style>
 
-    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeLight" parent="AppTheme">
         <item name="android:windowBackground">@color/solid_black</item>
         <item name="windowBackground">@color/solid_black</item>
         <item name="android:windowShowWallpaper">false</item>

@@ -15,5 +15,5 @@
     <color name="solid_black">#ff000000</color>
     <color name="white">#ffffffff</color>
     <color name="black_semi_transparent">#cc000000</color>
-    <color name="accent">#ff777777</color>
+    <color name="accent">#ffeeeeee</color>
 </resources>

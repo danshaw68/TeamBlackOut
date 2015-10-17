@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
 import android.support.v4.content.IntentCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
@@ -25,6 +26,24 @@ public class SettingsActivity extends PreferenceActivity {
         @SuppressWarnings("deprecation")
         @Override
         protected void onCreate(Bundle savedInstanceState) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.ThemeStyle), false)) {
+                        setTheme(R.style.AppThemeLight);
+                }
+                mListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+                        @Override
+                        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+                                if (!key.equals(getString(R.string.ThemeStyle))) {
+                                        return;
+                                }
+                                finish();
+                                final Intent intent = IntentCompat.makeMainActivity(new ComponentName(
+                                        SettingsActivity.this, MainActivity.class));
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                        }
+                };
+
                 super.onCreate(savedInstanceState);
                 addPreferencesFromResource(R.xml.preferences);
 
@@ -54,20 +73,6 @@ public class SettingsActivity extends PreferenceActivity {
                         root.addView(content);
                         root.addView(bar);
                 }
-
-                mListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
-                        @Override
-                        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                                if (!key.equals(getString(R.string.ThemeStyle))) {
-                                        return;
-                                }
-                                finish();
-                                final Intent intent = IntentCompat.makeMainActivity(new ComponentName(
-                                        SettingsActivity.this, MainActivity.class));
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
-                                startActivity(intent);
-                        }
-                };
         }
 
         @Override

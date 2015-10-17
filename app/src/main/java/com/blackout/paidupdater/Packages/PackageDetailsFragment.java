@@ -97,7 +97,7 @@ public class PackageDetailsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Vibrator vib = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-                vib.vibrate(100);
+                vib.vibrate(50);
                 download();
             }
         });
