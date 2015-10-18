@@ -8,4 +8,5 @@
     android:layout_height="wrap_content"
     android:minHeight="?attr/actionBarSize"
     android:background="@color/transparent"
-    app:title="@string/settings" />
+    app:title="@string/settings"
+    app:navigationIcon="?attr/homeAsUpIndicator"/>
