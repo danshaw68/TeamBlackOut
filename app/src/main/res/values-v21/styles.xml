@@ -11,6 +11,7 @@
         <item name="colorPrimary">@color/solid_black</item>
         <item name="colorPrimaryDark">@color/clear_background</item>
         <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <style name="AppThemeLight" parent="AppTheme">
@@ -23,5 +24,6 @@
         <item name="android:statusBarColor">@color/solid_black</item>
         <item name="android:navigationBarColor">@color/solid_black</item>
         <item name="android:colorAccent">@color/accent</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>

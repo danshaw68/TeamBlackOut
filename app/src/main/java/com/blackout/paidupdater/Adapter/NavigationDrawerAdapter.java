@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.blackout.paidupdater.Model.NavDrawerItem;
@@ -42,6 +43,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
     public void onBindViewHolder(MyViewHolder holder, int position) {
         NavDrawerItem current = data.get(position);
         holder.title.setText(current.getTitle());
+        holder.icon.setImageResource(R.drawable.ic_drawer_icon);
     }
 
     @Override
@@ -51,10 +53,12 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView title;
+        ImageView icon;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.title);
+            icon = (ImageView) itemView.findViewById(R.id.icon);
         }
     }
 }
