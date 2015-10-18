@@ -12,6 +12,13 @@
 
     <string name="ThemeStyle">Black Theme</string>
     <string name="settings">Settings</string>
+    <string name="settings_psa">Although things seem polished, we are not pleased with everything as of now. Keep in mind that things will continue to improve and this updater should be considering a work in progress until fully released.</string>
+    <string name="settings_options">Theme Options</string>
+
+    <string name="credits_title">Credits</string>
+    <string name="teamblackout">Team BlackOut</string>
+    <string name="about">About Team Black Out</string>
+    <string name="about_summary">Team Black Out is a team of both veteran app inverters and new-comers that want to learn. With over a lot of popular blacked out and transparent Android apps in our list, we are sure to not only amaze you but to guarantee once you use our themed apps you\'ll black out for a while.</string>
 
     <string-array name="nav_drawer_labels">
         <item>@string/title_section1</item>

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceGroup;
 import android.preference.PreferenceManager;
 import android.support.v4.content.IntentCompat;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +21,9 @@ import android.widget.ListView;
 
 import com.blackout.paidupdater.R;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class SettingsActivity extends PreferenceActivity {
         Toolbar bar;
 
@@ -26,7 +31,7 @@ public class SettingsActivity extends PreferenceActivity {
 
         @SuppressWarnings("deprecation")
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
+        public void onCreate(Bundle savedInstanceState) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.ThemeStyle), false)) {
                         setTheme(R.style.AppThemeLight);
@@ -47,6 +52,21 @@ public class SettingsActivity extends PreferenceActivity {
 
                 super.onCreate(savedInstanceState);
                 addPreferencesFromResource(R.xml.preferences);
+
+                PreferenceGroup devGroup = (PreferenceGroup) findPreference("dev");
+                ArrayList<Preference> dev = new ArrayList<Preference>();
+                for (int i = 0; i < devGroup.getPreferenceCount(); i++) {
+                        dev.add(devGroup.getPreference(i));
+                }
+                devGroup.removeAll();
+                devGroup.setOrderingAsAdded(false);
+                Collections.shuffle(dev);
+                for(int i = 0; i < dev.size(); i++) {
+                        Preference p = dev.get(i);
+                        p.setOrder(i);
+
+                        devGroup.addPreference(p);
+                }
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
                         LinearLayout root = (LinearLayout) findViewById(android.R.id.list).getParent().getParent().getParent();

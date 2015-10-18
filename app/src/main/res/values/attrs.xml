@@ -37,6 +37,11 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="Credits">
+        <attr name="googleplusHandle" format="string" />
+        <attr name="nameDev" format="string"/>
+    </declare-styleable>
+
     <attr name="themedMenuStoryDrawable" format="reference" />
     <attr name="themedMenuCommentDrawable" format="reference" />
     <attr name="windowBackground" format="reference" />
