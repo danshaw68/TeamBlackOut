@@ -29,6 +29,10 @@
         app:pressedTranslationZ="12dp"
         app:backgroundTint="@color/fab"
         app:rippleColor="@color/ripple"
-        style="@style/FabStyle"/>
+        style="@style/FabStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:foregroundGravity="bottom|right" />
 
 </RelativeLayout>

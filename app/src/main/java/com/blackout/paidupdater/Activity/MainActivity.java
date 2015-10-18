@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(mTitle);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
 
         drawerFragment = (FragmentDrawer)
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
