@@ -161,7 +161,10 @@ public class MainActivity extends AppCompatActivity
         case R.id.action_settings:
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
-            return true;
+            break;
+        case R.id.exit:
+            finish();
+            break;
         }
         return super.onOptionsItemSelected(item);
     }
