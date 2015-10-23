@@ -42,19 +42,9 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         tboupdater:googleplusHandle="+AndrewTraynham"/>
 
     <com.blackout.paidupdater.Credits.Credits
-        android:title="bob"
-        tboupdater:nameDev="Bob Wells"
-        tboupdater:googleplusHandle="104589723007655972696"/>
-
-    <com.blackout.paidupdater.Credits.Credits
         android:title="brad"
         tboupdater:nameDev="Brad Storts"
         tboupdater:googleplusHandle="+BradPCPIMPStorts"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="woody"
-        tboupdater:nameDev="Brad Woodruff"
-        tboupdater:googleplusHandle="+BradWoodruff"/>
 
     <com.blackout.paidupdater.Credits.Credits
         android:title="bryan"
@@ -62,34 +52,15 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         tboupdater:googleplusHandle="+BryanOwens"/>
 
     <com.blackout.paidupdater.Credits.Credits
-        android:title="bryce"
-        tboupdater:nameDev="Bryce Chapman"
-        tboupdater:googleplusHandle="116199975623652866979"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="clay"
-        tboupdater:nameDev="Clay Ward"
-        tboupdater:googleplusHandle="113253921778561301331"/>
+        android:title="alex"
+        tboupdater:nameDev="Alex Cruz"
+        tboupdater:googleplusHandle="107557684350196595860"/>
 
     <com.blackout.paidupdater.Credits.Credits
         android:title="david"
         tboupdater:nameDev="David Wilson"
         tboupdater:googleplusHandle="+DavidWilsonAnnihilation"/>
 
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="dennis"
-        tboupdater:nameDev="Dennis Ray"
-        tboupdater:googleplusHandle="+DennisRay"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="dennis_ross"
-        tboupdater:nameDev="Dennis Ross"
-        tboupdater:googleplusHandle="+DennisNemosfateRoss3513"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="edwin"
-        tboupdater:nameDev="Edwin Rivera"
-        tboupdater:googleplusHandle="+EdwinSPACEMANRivera"/>
 
     <com.blackout.paidupdater.Credits.Credits
         android:title="filippo"
@@ -102,24 +73,9 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         tboupdater:googleplusHandle="116368221056148312673"/>
 
     <com.blackout.paidupdater.Credits.Credits
-        android:title="ironjim41"
-        tboupdater:nameDev="IRONJIM 41"
-        tboupdater:googleplusHandle="118434004304436610223"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="jojo"
-        tboupdater:nameDev="jojo koss"
-        tboupdater:googleplusHandle="108663223009141116703"/>
-
-    <com.blackout.paidupdater.Credits.Credits
         android:title="kevin"
         tboupdater:nameDev="Kevin Fox"
         tboupdater:googleplusHandle="+KevinFox58"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="michael"
-        tboupdater:nameDev="Michael M"
-        tboupdater:googleplusHandle="105570350136711126886"/>
 
     <com.blackout.paidupdater.Credits.Credits
         android:title="mike"
@@ -127,44 +83,9 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         tboupdater:googleplusHandle="117058460959837282555"/>
 
     <com.blackout.paidupdater.Credits.Credits
-        android:title="nathan"
-        tboupdater:nameDev="Nathan Phillips"
-        tboupdater:googleplusHandle="+NathanPhillips"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="nimueh"
-        tboupdater:nameDev="Nimueh Lake"
-        tboupdater:googleplusHandle="+NimuehLake"/>
-
-    <com.blackout.paidupdater.Credits.Credits
         android:title="patrick"
         tboupdater:nameDev="Patrick Loth"
         tboupdater:googleplusHandle="+PatrickLoth"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="pete"
-        tboupdater:nameDev="Pete Best"
-        tboupdater:googleplusHandle="+PeteBest444"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="peter"
-        tboupdater:nameDev="peter goebbels"
-        tboupdater:googleplusHandle="115052237254453425835"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="robby"
-        tboupdater:nameDev="Robby Wilcox"
-        tboupdater:googleplusHandle="116735293681876746198"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="shantel"
-        tboupdater:nameDev="Shantel Dodson"
-        tboupdater:googleplusHandle="+ShantelDodson"/>
-
-    <com.blackout.paidupdater.Credits.Credits
-        android:title="thebear"
-        tboupdater:nameDev="Thebear Koss"
-        tboupdater:googleplusHandle="+ThebearKoss"/>
 
 </PreferenceCategory>
 
