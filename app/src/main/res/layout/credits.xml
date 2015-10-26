@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:ellipsize="end"
-            android:textColor="@android:color/white"
+            android:textColor="@color/text"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_alignParentBottom="true"
             android:paddingBottom="10dp"
