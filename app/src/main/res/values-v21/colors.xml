@@ -16,4 +16,5 @@
     <color name="white">#ffffffff</color>
     <color name="black_semi_transparent">#cc000000</color>
     <color name="accent">#ffeeeeee</color>
+    <color name="snackbar">#90000000</color>
 </resources>

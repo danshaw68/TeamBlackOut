@@ -11,5 +11,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/listView"
         android:layout_gravity="right"
-        android:scrollingCache="true" />
+        android:scrollingCache="true"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="false"
+        android:paddingLeft="@dimen/fast_scroll_padding_left"
+        android:paddingRight="@dimen/fast_scroll_padding_right"/>
 </LinearLayout>
