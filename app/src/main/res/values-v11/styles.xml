@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    tools:override="true"
+    <style name="Platform.V11.AppCompat.Light" parent="@android:style/Theme.Holo" tools:override="true">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Platform.V11.AppCompat" parent="@android:style/Theme.Holo.Wallpaper" tools:override="true">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

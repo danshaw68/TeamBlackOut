@@ -1,6 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:textColor">@color/text</item>
         <item name="android:windowBackground">@color/clear_background</item>
@@ -12,7 +10,6 @@
         <item name="colorPrimaryDark">@color/clear_background</item>
         <item name="android:colorAccent">@color/accent</item>
     </style>
-
     <style name="AppThemeLight" parent="AppTheme">
         <item name="android:windowBackground">@color/solid_black</item>
         <item name="windowBackground">@color/solid_black</item>
@@ -23,5 +20,27 @@
         <item name="android:statusBarColor">@color/solid_black</item>
         <item name="android:navigationBarColor">@color/solid_black</item>
         <item name="android:colorAccent">@color/accent</item>
+    </style>
+    <style name="Platform.AppCompat" parent="@android:style/Theme.Material.Wallpaper" tools:override="true">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Platform.AppCompat.Light" parent="@android:style/Theme.Material" tools:override="true">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Inverse" parent="@android:style/TextAppearance.Material" tools:override="true"/>
+    <style name="Base.TextAppearance.AppCompat.Large.Inverse" parent="@android:style/TextAppearance.Material.Large" tools:override="true"/>
+    <style name="Base.TextAppearance.AppCompat.Medium.Inverse" parent="@android:style/TextAppearance.Material.Medium" tools:override="true"/>
+    <style name="Base.TextAppearance.AppCompat.Small.Inverse" parent="@android:style/TextAppearance.Material.Small" tools:override="true"/>
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Subtitle" tools:override="true"/>
+    <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title" tools:override="true"/>
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText" parent="@android:style/Widget.Material.ActionBar.TabText" tools:override="true"/>
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabText.Inverse" parent="@android:style/Widget.Material.ActionBar.TabText" tools:override="true"/>
+    <style name="Base.Widget.AppCompat.Light.ActionBar.TabView" parent="@android:style/Widget.Material.ActionBar.TabView" tools:override="true"/>
+    <style name="Base.Widget.AppCompat.Light.PopupMenu" parent="@android:style/Widget.Material.PopupMenu" tools:override="true"/>
+    <style name="Base.Widget.AppCompat.Light.PopupMenu.Overflow" parent="@style/Base.Widget.AppCompat.PopupMenu" tools:override="true">
+        <item name="android:dropDownHorizontalOffset">-4.0dip</item>
+        <item name="android:overlapAnchor">true</item>
     </style>
 </resources>
