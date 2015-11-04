@@ -57,12 +57,12 @@ public class MainActivity extends AppCompatActivity
     private CharSequence mTitle;
     private DrawerLayout mFragmentDrawer;
 
-    private static final int TIME_SUNRISE = 1;
+    private static final int TIME_SUNRISE = 6;
     private static final int TIME_MORNING = 9;
-    private static final int TIME_NOON = 12;
+    private static final int TIME_NOON = 11;
     private static final int TIME_AFTERNOON = 13;
     private static final int TIME_SUNSET = 19;
-    private static final int TIME_NIGHT = 23;
+    private static final int TIME_NIGHT = 22;
     private ImageView bgImage;
 
     @Override
@@ -115,14 +115,14 @@ public class MainActivity extends AppCompatActivity
                         .getBoolean(getString(R.string.poly_time_context_headers), false)) {
                     bgImage.setBackgroundResource(R.drawable.night);
                 } else {
-                    bgImage.setBackgroundResource(R.drawable.header);
+                    bgImage.setBackgroundResource(R.drawable.header2);
                 }
             } else if (hour >= TIME_SUNRISE && hour < TIME_MORNING) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.poly_time_context_headers), false)) {
                     bgImage.setBackgroundResource(R.drawable.sunrise);
                 } else {
-                    bgImage.setBackgroundResource(R.drawable.header2);
+                    bgImage.setBackgroundResource(R.drawable.header);
                 }
             } else if (hour >= TIME_MORNING && hour < TIME_NOON) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
@@ -136,14 +136,14 @@ public class MainActivity extends AppCompatActivity
                         .getBoolean(getString(R.string.poly_time_context_headers), false)) {
                     bgImage.setBackgroundResource(R.drawable.noon);
                 } else {
-                    bgImage.setBackgroundResource(R.drawable.header2);
+                    bgImage.setBackgroundResource(R.drawable.header);
                 }
             } else if (hour >= TIME_AFTERNOON && hour < TIME_SUNSET) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.poly_time_context_headers), false)) {
                     bgImage.setBackgroundResource(R.drawable.afternoon);
                 } else {
-                    bgImage.setBackgroundResource(R.drawable.header);
+                    bgImage.setBackgroundResource(R.drawable.header2);
                 }
             } else if (hour >= TIME_SUNSET && hour < TIME_NIGHT) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
