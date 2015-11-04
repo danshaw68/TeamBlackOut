@@ -28,6 +28,8 @@ public class SettingsActivity extends PreferenceActivity {
         Toolbar bar;
 
         private SharedPreferences.OnSharedPreferenceChangeListener mListener;
+        private SharedPreferences.OnSharedPreferenceChangeListener mListenerTimeContextHeaders;
+        private SharedPreferences.OnSharedPreferenceChangeListener mListenerPolyTimeContextHeaders;
 
         @SuppressWarnings("deprecation")
         @Override

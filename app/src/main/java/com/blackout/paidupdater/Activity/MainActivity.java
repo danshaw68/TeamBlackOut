@@ -29,6 +29,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ import org.apache.commons.io.FilenameUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity
         implements FragmentDrawer.FragmentDrawerListener {
@@ -54,6 +56,14 @@ public class MainActivity extends AppCompatActivity
 
     private CharSequence mTitle;
     private DrawerLayout mFragmentDrawer;
+
+    private static final int TIME_SUNRISE = 1;
+    private static final int TIME_MORNING = 9;
+    private static final int TIME_NOON = 12;
+    private static final int TIME_AFTERNOON = 13;
+    private static final int TIME_SUNSET = 19;
+    private static final int TIME_NIGHT = 23;
+    private ImageView bgImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +103,59 @@ public class MainActivity extends AppCompatActivity
 
         // display the first navigation drawer view on app launch
         displayView(1);
+
+        bgImage = (ImageView) findViewById(R.id.nav_header_container);
+
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        if (PreferenceManager.getDefaultSharedPreferences(this)
+                .getBoolean(getString(R.string.time_context_headers), false)) {
+            if (hour < TIME_SUNRISE || hour >= TIME_NIGHT) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.poly_time_context_headers), false)) {
+                    bgImage.setBackgroundResource(R.drawable.night);
+                } else {
+                    bgImage.setBackgroundResource(R.drawable.header);
+                }
+            } else if (hour >= TIME_SUNRISE && hour < TIME_MORNING) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.poly_time_context_headers), false)) {
+                    bgImage.setBackgroundResource(R.drawable.sunrise);
+                } else {
+                    bgImage.setBackgroundResource(R.drawable.header2);
+                }
+            } else if (hour >= TIME_MORNING && hour < TIME_NOON) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.poly_time_context_headers), false)) {
+                    bgImage.setBackgroundResource(R.drawable.morning);
+                } else {
+                    bgImage.setBackgroundResource(R.drawable.header);
+                }
+            } else if (hour >= TIME_NOON && hour < TIME_AFTERNOON) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.poly_time_context_headers), false)) {
+                    bgImage.setBackgroundResource(R.drawable.noon);
+                } else {
+                    bgImage.setBackgroundResource(R.drawable.header2);
+                }
+            } else if (hour >= TIME_AFTERNOON && hour < TIME_SUNSET) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.poly_time_context_headers), false)) {
+                    bgImage.setBackgroundResource(R.drawable.afternoon);
+                } else {
+                    bgImage.setBackgroundResource(R.drawable.header);
+                }
+            } else if (hour >= TIME_SUNSET && hour < TIME_NIGHT) {
+                if (PreferenceManager.getDefaultSharedPreferences(this)
+                        .getBoolean(getString(R.string.poly_time_context_headers), false)) {
+                    bgImage.setBackgroundResource(R.drawable.sunset);
+                } else {
+                    bgImage.setBackgroundResource(R.drawable.header2);
+                }
+            }
+        } else {
+            bgImage.setBackgroundResource(R.drawable.header);
+        }
     }
 
     @Override
@@ -145,12 +208,6 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
-
-
-
-    public void setActivityBackgroundColor(int color) {
-        View view = this.getWindow().getDecorView();
-    view.setBackgroundColor(color);}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

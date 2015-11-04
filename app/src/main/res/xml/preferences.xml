@@ -20,6 +20,24 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         android:defaultValue="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="options"
+        android:title="@string/header_options">
+
+        <com.blackout.paidupdater.Themes.SwitchPreference
+            android:key="@string/time_context_headers"
+            android:title="@string/time_context_headers"
+            android:summaryOn="@string/disable_time_context_headers_summary"
+            android:summaryOff="@string/enable_time_context_headers_summary"
+            android:defaultValue="false" />
+
+        <com.blackout.paidupdater.Themes.SwitchPreference
+            android:key="@string/poly_time_context_headers"
+            android:title="@string/poly_time_context_headers"
+            android:dependency="@string/time_context_headers"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
 <PreferenceCategory
     android:key="about"
     android:title="@string/about">
