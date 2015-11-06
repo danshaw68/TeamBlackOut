@@ -1,5 +1,6 @@
 package com.blackout.paidupdater.Activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
@@ -13,6 +14,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
@@ -21,6 +23,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.PermissionChecker;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -65,6 +68,8 @@ public class MainActivity extends AppCompatActivity
     private static final int TIME_NIGHT = 22;
     private ImageView bgImage;
 
+    private final static int REQUEST_WRITE_STORAGE_PERMISSION = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (PreferenceManager.getDefaultSharedPreferences(this)
@@ -75,6 +80,15 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id
                 .coordinatorLayout);
+
+        if (Build.VERSION.SDK_INT >= 23 && PermissionChecker
+                .checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) !=
+                PermissionChecker.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    REQUEST_WRITE_STORAGE_PERMISSION);
+        } else {
+            // Do absolutely NOTHING
+        }
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
