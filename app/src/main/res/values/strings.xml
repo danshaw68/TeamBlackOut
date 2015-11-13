@@ -18,8 +18,7 @@
     <string name="time_context_headers">Time Contextual Headers</string>
     <string name="enable_time_context_headers_summary">Enable time contextual images</string>
     <string name="disable_time_context_headers_summary">Disable time contextual images</string>
-    <string name="second_header">TBO Dev Made Headers</string>
-    <string name="third_header">TBOT Made Headers</string>
+    <string name="second_header">TeamBlackOut Headers</string>
 
     <string name="credits_title">Credits</string>
     <string name="teamblackout">Team BlackOut</string>

@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 610
-        versionName "6.1.0"
+        versionCode 611
+        versionName "6.1.1"
     }
     buildTypes {
         debug {
@@ -39,12 +39,6 @@ dependencies {
     compile 'com.android.support:palette-v7:23.0.1'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     compile 'org.w3c:dom:2.3.0-jaxb-1.0.6'
-    compile('com.mikepenz:materialdrawer:4.3.1@aar') {
-        transitive = true
-    }
-    compile 'com.afollestad:material-dialogs:0.6.6.1'
-    compile 'com.balysv:material-ripple:1.0.2'
-    compile 'com.melnykov:floatingactionbutton:1.3.0'
     compile 'com.android.support:design:23.0.1'
     compile 'com.android.support:recyclerview-v7:23.0.1'
 }

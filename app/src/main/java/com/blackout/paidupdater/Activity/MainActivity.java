@@ -127,35 +127,23 @@ public class MainActivity extends AppCompatActivity
             if (hour < TIME_SUNRISE || hour >= TIME_NIGHT) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
-                    bgImage.setBackgroundResource(R.drawable.header2);
+                    bgImage.setBackgroundResource(R.drawable.header_jim);
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_night);
-                }
-                if   (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(getString(R.string.third_header), false)){
-                    bgImage.setBackgroundResource(R.drawable.night);
                 }
             } else if (hour >= TIME_SUNRISE && hour < TIME_MORNING) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
-                    bgImage.setBackgroundResource(R.drawable.header);
+                    bgImage.setBackgroundResource(R.drawable.header_pete);
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_sunrise);
-                }
-                if   (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(getString(R.string.third_header), false)){
-                    bgImage.setBackgroundResource(R.drawable.sunrise);
                 }
             } else if (hour >= TIME_MORNING && hour < TIME_NOON) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
-                    bgImage.setBackgroundResource(R.drawable.header);
+                    bgImage.setBackgroundResource(R.drawable.header_woody);
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_morning);
-                }
-                if   (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(getString(R.string.third_header), false)){
-                    bgImage.setBackgroundResource(R.drawable.morning);
                 }
             } else if (hour >= TIME_NOON && hour < TIME_AFTERNOON) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
@@ -164,10 +152,6 @@ public class MainActivity extends AppCompatActivity
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_noon);
                 }
-                if   (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(getString(R.string.third_header), false)){
-                    bgImage.setBackgroundResource(R.drawable.noon);
-                }
             } else if (hour >= TIME_AFTERNOON && hour < TIME_SUNSET) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
@@ -175,20 +159,12 @@ public class MainActivity extends AppCompatActivity
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_afternoon);
                 }
-                if   (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(getString(R.string.third_header), false)){
-                    bgImage.setBackgroundResource(R.drawable.afternoon);
-                }
             } else if (hour >= TIME_SUNSET && hour < TIME_NIGHT) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
-                    bgImage.setBackgroundResource(R.drawable.header2);
+                    bgImage.setBackgroundResource(R.drawable.header3);
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_sunset);
-                }
-                if   (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(getString(R.string.third_header), false)){
-                    bgImage.setBackgroundResource(R.drawable.sunset);
                 }
             }
         } else {
