@@ -233,10 +233,12 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
             break;
-        case R.id.exit:
-            finish();
-            break;
-        }
+            case R.id.pushbullet:
+                Intent browserIntent = new Intent("android.intent.action.VIEW", Uri.parse("https://www.pushbullet.com/channel-popup?tag=teamblackout"));
+            startActivity(browserIntent);
+            case R.id.exit:
+                finish();
+                break;}
         return super.onOptionsItemSelected(item);
     }
 
