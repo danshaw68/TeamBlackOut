@@ -236,6 +236,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.pushbullet:
                 Intent browserIntent = new Intent("android.intent.action.VIEW", Uri.parse("https://www.pushbullet.com/channel-popup?tag=teamblackout"));
             startActivity(browserIntent);
+            case R.id.resources:
+                browserIntent = new Intent("android.intent.action.VIEW", Uri.parse("http://teamblackedout.com/?page_id=1718"));
+                startActivity(browserIntent);
             case R.id.exit:
                 finish();
                 break;}
