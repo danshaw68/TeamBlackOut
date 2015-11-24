@@ -16,6 +16,11 @@
         android:orderInCategory="100"
         android:showAsAction="never"/>
 
+    <item android:id="@+id/donate"
+        android:title="@string/donate"
+        android:orderInCategory="100"
+        android:showAsAction="never"/>
+
     <item android:id="@+id/exit"
         android:title="@string/button_exit"
         android:orderInCategory="100"

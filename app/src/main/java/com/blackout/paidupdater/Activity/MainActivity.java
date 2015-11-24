@@ -240,6 +240,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.resources:
                 Intent browser2Intent = new Intent("android.intent.action.VIEW", Uri.parse("http://teamblackedout.com/?page_id=1718"));
                 startActivity(browser2Intent);
+                break;
+            case R.id.donate:
+                Intent donate = new Intent("android.intent.action.VIEW", Uri.parse("http:teamblackedout.com/?page_id=1736"));
+                startActivity(donate);
+                break;
             case R.id.exit:
                 finish();
                 break;}
