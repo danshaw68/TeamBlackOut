@@ -17,4 +17,6 @@
     <color name="black_semi_transparent">#cc000000</color>
     <color name="accent">#ffeeeeee</color>
     <color name="snackbar">#90000000</color>
+    <color name="drawer_pressed">#50ffffff</color>
+    <color name="drawer_selected">#cc555555</color>
 </resources>

@@ -1,8 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/drawer_bg"
-    android:choiceMode="singleChoice">
+    android:background="@color/drawer_bg">
 
     <ImageView
         android:id="@+id/nav_header_container"
@@ -17,5 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nav_header_container"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:choiceMode="singleChoice"/>
 </RelativeLayout>

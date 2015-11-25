@@ -16,10 +16,13 @@ import com.blackout.paidupdater.R;
 import java.util.Collections;
 import java.util.List;
 
+
+
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();
     private LayoutInflater inflater;
     private Context context;
+    private int focusedItem = 1;
 
     public NavigationDrawerAdapter(Context context, List<NavDrawerItem> data) {
         this.context = context;
@@ -44,6 +47,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
         NavDrawerItem current = data.get(position);
         holder.title.setText(current.getTitle());
         holder.icon.setImageResource(R.drawable.ic_drawer_icon);
+        holder.itemView.setSelected(focusedItem == position);
     }
 
     @Override
@@ -51,7 +55,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
         return data.size();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title;
         ImageView icon;
 
@@ -59,6 +63,16 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.title);
             icon = (ImageView) itemView.findViewById(R.id.icon);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Redraw the old selection and the new
+                    notifyItemChanged(focusedItem);
+                    focusedItem = getLayoutPosition();
+                    notifyItemChanged(focusedItem);
+                }
+            });
         }
     }
 }
