@@ -12,7 +12,7 @@
     <string name="button_exit">Exit</string>
     <string name="ThemeStyle">Black Theme</string>
     <string name="settings">Settings</string>
-    <string name="settings_psa">Although things seem polished, we are not pleased with everything as of now. Keep in mind that things will continue to improve and this updater should be considering a work in progress until fully released.</string>
+    <string name="settings_psa">Although things seem polished, we are not satisfied with everything as of now. Keep in mind that things will continue to improve as we learn new things to add in the future!</string>
     <string name="settings_options">Theme Options</string>
     <string name="header_options">Header Options</string>
     <string name="time_context_headers">Time Contextual Headers</string>
