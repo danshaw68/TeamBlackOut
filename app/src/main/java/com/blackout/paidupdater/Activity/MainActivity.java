@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity
             } else if (hour >= TIME_MORNING && hour < TIME_NOON) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
-                    bgImage.setBackgroundResource(R.drawable.header_woody);
+                    bgImage.setBackgroundResource(R.drawable.header);
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_morning);
                 }
