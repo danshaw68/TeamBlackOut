@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "32789528359",
+    "firebase_url": "https://teamblackout-updater.firebaseio.com",
+    "project_id": "teamblackout-updater",
+    "storage_bucket": "teamblackout-updater.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32789528359:android:a0e2ebefc29bd40e",
+        "android_client_info": {
+          "package_name": "com.blackout.paidupdater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32789528359-689kf5qme7aq47905albv3s48vmf8vvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl0z9AXkXEu4eYcnnQvCmu_EEKZSLjaso"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
