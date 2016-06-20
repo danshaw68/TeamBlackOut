@@ -86,11 +86,6 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         tboupdater:googleplusHandle="101122825749440089192"/>
 
     <com.blackout.paidupdater.Credits.Credits
-        android:title="frankie"
-        tboupdater:nameDev="Frankie Toimil"
-        tboupdater:googleplusHandle="116368221056148312673"/>
-
-    <com.blackout.paidupdater.Credits.Credits
         android:title="kevin"
         tboupdater:nameDev="Kevin Fox"
         tboupdater:googleplusHandle="+KevinFox58"/>

@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity
             } else if (hour >= TIME_MORNING && hour < TIME_NOON) {
                 if (PreferenceManager.getDefaultSharedPreferences(this)
                         .getBoolean(getString(R.string.second_header), false)) {
-                    bgImage.setBackgroundResource(R.drawable.header);
+                    bgImage.setBackgroundResource(R.drawable.header_woody);
                 } else {
                     bgImage.setBackgroundResource(R.drawable.thyrus_morning);
                 }
@@ -233,10 +233,6 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
             break;
-            case R.id.pushbullet:
-                Intent browserIntent = new Intent("android.intent.action.VIEW", Uri.parse("https://www.pushbullet.com/channel-popup?tag=teamblackout"));
-            startActivity(browserIntent);
-                break;
             case R.id.resources:
                 Intent browser2Intent = new Intent("android.intent.action.VIEW", Uri.parse("http://teamblackedout.com/?page_id=1718"));
                 startActivity(browser2Intent);
