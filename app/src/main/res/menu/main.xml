@@ -6,11 +6,6 @@
         android:orderInCategory="100"
         android:showAsAction="never" />
 
-    <item android:id="@+id/pushbullet"
-        android:title="@string/update_notifications"
-        android:orderInCategory="100"
-        android:showAsAction="never"/>
-
     <item android:id="@+id/resources"
         android:title="@string/resources"
         android:orderInCategory="100"
