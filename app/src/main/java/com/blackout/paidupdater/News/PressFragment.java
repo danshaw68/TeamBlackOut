@@ -58,7 +58,7 @@ public class PressFragment extends Fragment {
 
 
         getActionBar().setTitle("Press Releases");
-        getActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setIcon(R.mipmap.ic_launcher);
 
         try {
             GetUpdatesList task = new GetUpdatesList("http://teamblackedout.com/update_description.xml", getActivity(), false);

@@ -8,8 +8,8 @@ android {
         applicationId "com.blackout.paidupdater"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 620
-        versionName "6.2.0"
+        versionCode 621
+        versionName "6.2.1"
     }
     buildTypes {
         debug {

@@ -57,7 +57,7 @@ public class PackageListFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
         getActionBar().setTitle(getArguments().getString(ARG_TITLE));
-        getActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setIcon(R.mipmap.ic_launcher);
 
         try {
             GetAPKList task = new GetAPKList(getArguments().getString(ARG_URL), getActivity());

@@ -79,7 +79,6 @@ xmlns:tboupdater="http://schemas.android.com/apk/res/com.blackout.paidupdater">
         tboupdater:nameDev="David Wilson"
         tboupdater:googleplusHandle="+DavidWilsonAnnihilation"/>
 
-
     <com.blackout.paidupdater.Credits.Credits
         android:title="filippo"
         tboupdater:nameDev="Filippo Vomiero"

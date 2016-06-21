@@ -50,7 +50,7 @@ public class ThemeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
         getActionBar().setTitle("Available Theme Packages");
-        getActionBar().setIcon(R.drawable.ic_launcher);
+        getActionBar().setIcon(R.mipmap.ic_launcher);
         try {
             GetThemeList task = new GetThemeList(getActivity());
 
